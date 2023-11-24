@@ -1,11 +1,14 @@
 import { IMG_URL, STAR_URL } from "../utils/constants";
+import { Card } from "@mui/material";
+import { Link } from "react-router-dom";
 const ResturantCard = ({ resData }) => {
   const { name, cuisines, avgRating, areaName, cloudinaryImageId, sla } =
     resData?.info;
-    let dishes=cuisines[0];
+    console.log(resData);
     
     
   return (
+    <Link to={`/resturants/${resData?.info?.id}`}>
     <div className="res-card">
       <div className="res-img-wrapper">
         <img src={IMG_URL + cloudinaryImageId} alt="" />
@@ -20,6 +23,7 @@ const ResturantCard = ({ resData }) => {
       <p className="res-card-cusine">{cuisines.join(', ')}</p>
       <p>{areaName}</p>
     </div>
+    </Link>
   );
 };
 export default ResturantCard;

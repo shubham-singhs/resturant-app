@@ -1,8 +1,13 @@
+
 .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid black;
     margin: 2px;
+}
+.home,.about-us{
+    text-decoration: none;
 }
 .header .logo{
     width: 150px;
@@ -154,4 +159,8 @@
     100% {
         transform: translateX(100%);
    }
+}
+/*  */
+.default-price{
+    text-decoration: line-through;
 }

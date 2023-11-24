@@ -11,10 +11,11 @@ const Body = () => {
     );
     const json = await data.json();
     setListOfResturant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setfilteredResturant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setfilteredResturant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
+  console.log(filteredResturant);
   useEffect(() => {
     fetchData();
   }, []);
