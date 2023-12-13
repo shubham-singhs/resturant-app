@@ -8,7 +8,7 @@ const ResturantCard = ({ resData }) => {
     
     
   return (
-    <Link to={`/resturants/${resData?.info?.id}`}>
+    <Link to={`/resturants/${resData?.info?.id}`} className="link-wrapper">
     <div className="res-card">
       <div className="res-img-wrapper">
         <img src={IMG_URL + cloudinaryImageId} alt="" />
